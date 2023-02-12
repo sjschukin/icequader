@@ -6,7 +6,7 @@ core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_barrio
 
 libraries:
-  - barrio_icequader/bootstrap_cdn
+  - barrio_icequader/bootstrap
   - barrio_icequader/global-styling
 
 regions:
