@@ -5,7 +5,6 @@ global-styling:
   css:
     component:
       css/style.css: {}
-      css/colors.css: {}
 bootstrap:
   js:
     /libraries/bootstrap/js/bootstrap.min.js: {}
@@ -31,3 +30,7 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+frontpage-library:
+  js:
+    //cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js: {}
+    js/front_page.js: {}

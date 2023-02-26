@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.top_header: Items for the top header region.
+ * - page.top_header_form: Items for the top header form region.
+ * - page.header: Items for the header region.
+ * - page.header_form: Items for the header form region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * Theme variables:
+ * - navbar_top_attributes: Items for the header region.
+ * - navbar_attributes: Items for the header region.
+ * - content_attributes: Items for the header region.
+ * - sidebar_first_attributes: Items for the highlighted region.
+ * - sidebar_second_attributes: Items for the primary menu region.
+ * - sidebar_collapse: If the sidebar_first will collapse.
+ *
+ * @see template_preprocess_page()
+ * @see bootstrap_barrio_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+{{ attach_library('barrio_icequader/frontpage-library') }}
+<div id="page-wrapper-front">
+  <div id="page-front">
+    <div id="logo-front" class="mx-auto w-25">
+      <svg version="1.1" viewBox="0 0 1593.1 909.25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(421.01 -160.89)">
+          <g transform="matrix(.888 0 0 1.1261 -1089.2 473.6)" fill="#fff" aria-label="icequader">
+            <path d="m752.43 163.47q0-9.2064 6.4045-15.611 6.8047-6.4045 15.611-6.4045t15.211 6.4045q6.8048 6.4045 6.8048 15.611t-6.8048 15.611q-6.4045 6.4045-15.211 6.4045t-15.611-6.4045q-6.4045-6.4045-6.4045-15.611zm37.226 271.79q-6.4045 6.4045-15.211 6.4045t-15.611-6.4045q-6.4045-6.4045-6.4045-15.611v-164.11q0-9.2064 6.4045-15.611 6.8047-6.4045 15.611-6.4045t15.211 6.4045q6.8048 6.4045 6.8048 15.611v164.11q0 9.2064-6.8048 15.611z" />
+            <path d="m954.17 445.67q-48.033 0-74.052-27.219-26.018-27.619-26.018-80.856 0-52.437 25.218-80.056 25.218-28.02 70.849-28.02 21.215 0 40.428 2.802 7.6053 1.2008 12.409 7.205 5.2036 6.0042 5.2036 14.01 0 6.8048-5.6039 10.808-5.2036 4.0028-12.008 2.4017-19.614-4.4031-37.226-4.4031-27.619 0-41.629 18.013-13.609 18.013-13.609 57.24 0 40.028 14.41 57.64 14.81 17.612 44.831 17.612 18.813 0 36.025-5.2036 6.4045-2.0014 11.608 2.0014 5.2036 3.6025 5.2036 10.007 0 8.0056-5.2036 14.41-5.2036 6.4045-12.809 8.0056-19.213 3.6025-38.027 3.6025z" />
+            <path d="m1145.9 260.74q-45.632 0-51.236 54.038-0.8006 3.6025 3.2022 3.6025h89.662q3.2022 0 3.2022-3.6025-2.4017-54.038-44.831-54.038zm10.007 184.93q-50.035 0-77.254-27.219-26.819-27.219-26.819-80.856 0-53.637 24.017-80.856 24.417-27.219 70.049-27.219 83.258 0 86.06 97.668 0.4002 9.6067-6.8048 16.011-7.205 6.4045-16.812 6.4045h-110.88q-3.2022 0-3.2022 3.2022 4.8033 61.643 65.646 61.643 21.215 0 41.629-6.8047 6.0041-2.0014 11.208 1.6011 5.2036 3.6025 5.2036 10.007 0 7.6053-4.8034 13.609-4.8033 6.0042-12.409 8.0056-22.015 4.8034-44.831 4.8034z" />
+            <path d="m1363.7 261.54q-52.036 0-52.036 76.053 0 37.626 14.01 56.84t38.026 19.213q21.215 0 36.425-13.609 15.611-14.01 15.611-32.423v-60.042q0-18.413-15.611-32.022-15.211-14.01-36.425-14.01zm-10.007 184.13q-36.425 0-60.442-29.22-23.616-29.22-23.616-78.855 0-51.236 22.816-79.656 23.216-28.42 61.243-28.42 19.213 0 33.624 6.8047 14.41 6.4045 29.22 22.816 0.4003 0.40028 0.8006 0.40028t0.4003-0.40028v-6.0042q0.4002-8.0056 6.4044-13.609 6.0042-6.0042 14.01-6.0042t13.61 6.0042q6.0042 5.6039 6.0042 13.609v255.78q0 8.8061-6.0042 14.81-6.0042 6.0042-14.81 6.0042-8.8061 0-15.211-6.0042-6.0041-6.0042-6.0041-14.81v-88.862q0-0.40028-0.4003-0.40028t-0.8006 0.40028q-25.218 25.618-60.842 25.618z" />
+            <path d="m1581.4 445.67q-35.224 0-51.636-19.213-16.412-19.614-16.412-64.845v-107.68q0-8.4059 6.0042-14.41t14.41-6.0042q8.4059 0 14.41 6.0042 6.4045 6.0042 6.4045 14.41v101.67q0 33.223 8.8061 45.632t30.021 12.409q18.813 0 35.225-16.411 16.812-16.812 16.812-35.625v-107.27q0-8.8061 6.0042-14.81 6.4044-6.0042 15.211-6.0042 8.8061 0 14.81 6.0042t6.0042 14.81v167.72q0 8.0056-6.0042 14.01-5.6039 5.6039-13.61 5.6039t-14.01-5.6039q-6.0041-6.0042-6.4044-14.01v-6.0042q0-0.40028-0.4003-0.40028t-0.8006 0.40028q-28.42 29.621-64.845 29.621z" />
+            <path d="m1843.2 336.79q-32.823 0-49.635 11.208-16.412 10.808-16.412 29.621 0 14.81 8.8062 24.417 8.8061 9.6067 21.215 9.6067 26.418 0 42.029-16.411 16.011-16.812 16.011-45.632v-9.6067q0-3.2022-3.6025-3.2022zm-46.032 108.88q-27.219 0-44.831-17.612-17.212-17.612-17.212-46.432 0-35.225 26.819-54.438 26.819-19.614 81.257-19.614h18.413q3.6025 0 3.6025-3.6025v-4.4031q0-21.215-10.007-29.621-10.007-8.4059-36.025-8.4059-23.216 0-55.238 9.6067-6.0042 2.0014-11.608-1.6011-5.2036-4.0028-5.2036-10.407 0-8.0056 4.8033-14.41 4.8034-6.4045 12.409-8.0056 28.82-7.205 54.838-7.205 50.435 0 69.248 18.013t18.813 66.046v108.48q0 8.0056-6.0042 14.01-5.6039 5.6039-13.61 5.6039t-14.01-5.6039q-5.6039-6.0042-6.0042-14.01l-0.4003-10.007q0-0.40028-0.4003-0.40028-0.8005 0-0.8005 0.40028-23.216 33.623-68.848 33.623z" />
+            <path d="m2044.9 261.54q-52.036 0-52.036 76.053 0 38.427 13.61 57.24 14.01 18.813 38.427 18.813 21.215 0 36.425-14.01 15.611-14.01 15.611-32.022v-60.042q0-18.013-15.611-32.022-15.211-14.01-36.425-14.01zm-10.007 184.13q-36.425 0-60.442-29.22-23.616-29.22-23.616-78.855 0-51.236 22.816-79.656 23.216-28.42 61.243-28.42 35.625 0 60.842 25.618 0.4003 0.40028 0.8006 0.40028 0.4002 0 0.4002-0.40028v-92.865q0-8.8061 6.0042-14.81 6.4045-6.0042 15.211-6.0042 8.8062 0 14.81 6.0042 6.0041 6.0042 6.0041 14.81v259.78q0 8.0056-6.0041 14.01-5.6039 5.6039-13.61 5.6039t-14.01-5.6039q-5.6039-6.0042-6.0042-14.01l-0.4003-6.0042q0-0.40028-0.4002-0.40028-0.4003 0-0.8006 0.40028-14.81 16.411-29.22 23.216-14.41 6.4045-33.623 6.4045z" />
+            <path d="m2278.7 260.74q-45.632 0-51.236 54.038-0.8006 3.6025 3.2022 3.6025h89.662q3.2022 0 3.2022-3.6025-2.4016-54.038-44.831-54.038zm10.007 184.93q-50.035 0-77.254-27.219-26.819-27.219-26.819-80.856 0-53.637 24.017-80.856 24.417-27.219 70.049-27.219 83.258 0 86.06 97.668 0.4002 9.6067-6.8048 16.011-7.205 6.4045-16.812 6.4045h-110.88q-3.2022 0-3.2022 3.2022 4.8033 61.643 65.646 61.643 21.215 0 41.629-6.8047 6.0041-2.0014 11.208 1.6011 5.2036 3.6025 5.2036 10.007 0 7.6053-4.8034 13.609-4.8033 6.0042-12.409 8.0056-22.015 4.8034-44.831 4.8034z" />
+            <path d="m2448 435.26q-6.4044 6.4045-15.611 6.4045-9.2064 0-15.611-6.4045-6.4045-6.4045-6.4045-15.611v-165.32q0-8.8061 6.0042-14.81t14.81-6.0042 14.81 6.0042q6.4045 6.0042 6.4045 14.81v18.813q0 0.40027 0.4003 0.40027 0.8005 0 0.8005-0.40027 12.008-16.411 32.022-26.819 20.014-10.808 43.63-12.409 7.205-0.40027 12.008 4.4031 5.2037 4.8034 5.2037 12.008t-5.2037 12.409q-4.8033 4.8034-12.008 5.2036-38.427 1.6011-56.84 20.014-18.012 18.013-18.012 53.637v78.054q0 9.2064-6.4045 15.611z" />
+          </g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="m377.98 574.89-114.26-0.76762-112.91-196.24 113.77-196.04 226.87-0.1733 113.05 196.47-113.64 196.72" stroke-width="41.575" style="paint-order:normal" />
+            <path d="m150.92 378.22 227.09-0.19033 113.25-196.18" stroke-width="41.575" />
+            <path d="m378.05 491.72-64.82-0.28569-67.746-113.14 67.719-114.04 128.68 0.12273 68.36 113.76-68.557 113.12-63.845-113.18" stroke-width="22.677" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
